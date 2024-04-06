@@ -1,4 +1,4 @@
-/* Base styles */
+
 body, html {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ body, html {
   color: #AD5472; /* Deeper pink for headings */
 }
 
-/* Profile picture styling */
+/* picture styling */
 .profile-picture figure {
   margin: 0;
   float: left; /* Align image to the left */
@@ -51,7 +51,7 @@ body, html {
   border-radius: 5px; /* Rounded corners for list items */
 }
 
-/* Clear floats after the profile picture and interests list */
+
 .about-me:after, .interests-list:after {
   content: "";
   display: table;
