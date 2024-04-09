@@ -1,3 +1,42 @@
 body {
-    background-color: skyblue;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  padding: 16px;
+  background: rgb(219, 83, 186);
+  background: linear-gradient(
+    90deg,
+    rgba(219, 83, 186, 1) 0%,
+    rgba(72, 193, 218, 1) 100%
+  );
+
+  ul {
+    list-style-type: square;
+  }
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: Gill Sans, Verdana;
+}
+
+.img-wrapper {
+  float: right;
+  img {
+    display: block;
+    width: 420px;
+    height: 500px;
+  }
+}
+
+.content {
+  font-weight: 400;
+  color: #515050;
+  font-size: 19px;
+  font-family: 'Franziska, Georgia, Cambria';
 }

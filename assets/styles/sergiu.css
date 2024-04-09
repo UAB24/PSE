@@ -1,0 +1,33 @@
+.content {
+    margin: -12px -8px;
+    padding: 16px;
+    background-color: #A2A2A1FF;
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    p, ul {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 24px;
+    }
+    ul {
+        list-style-type: circle;
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.img-container { 
+    background-color: #195190FF;
+    float: left;
+    margin-right: 8px;
+    img {
+        padding: 16px;
+        display: block;
+        width: 350px;
+        height: 460px;
+    }
+}

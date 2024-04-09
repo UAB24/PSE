@@ -4,4 +4,5 @@ Proiect Software in Echipa - PABD2024
 2. Eduard Toma
 3. Catalin Bera
 4. Bagrin Antonina
-5. Cornel Vaideanu
+5. Toma Sergiu
+6. Cornel Vaideanu
