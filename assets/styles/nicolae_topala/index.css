@@ -1,0 +1,20 @@
+.content-page {
+    background-color: #E6E6FA;
+}
+
+.content-element {
+    max-width: 800px;
+    margin: auto;
+    overflow: auto;
+}
+
+.content-text {
+    overflow: auto;
+}
+
+.personal-image {
+    float: left;
+    margin-right: 8px;
+    width: 350px;
+    height: auto; 
+}

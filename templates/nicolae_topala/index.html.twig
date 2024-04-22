@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nicolae Topala{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('styles/nicolae_topala/index.css') }}">
+{% endblock %}
+
+{% block body %}
+    <body class="content-page">    
+        <div class="content-element">
+            <img src="{{ asset('images/nicolae_topala.jpg') }}" alt="Nicola Topala's beatiful face" class="personal-image">
+            <div class="content-text">
+                <p>Role: Student</p>
+                <p>Studying at "1 decembrie 1918" University of Alba Iulia, currently in the second year of the master's degree. Preferred programming language is C#.</p>
+                <p>List of favorit things</p>
+                <ul>
+                    <li>Cats</li>
+                    <li>Videos games</li>
+                    <li>The payday</li>
+                    <li>Increases</li>
+                </ul>
+            <div>
+        </div>
+    </body>
+{% endblock %}

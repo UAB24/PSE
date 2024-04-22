@@ -6,4 +6,4 @@ Proiect Software in Echipa - PABD2024
 4. Bagrin Antonina
 5. Toma Sergiu
 6. Zahut Sorina
-7. 
+7. Topala Nicolae
