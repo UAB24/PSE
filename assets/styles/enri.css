@@ -1,0 +1,97 @@
+/* General body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header and sections */
+h2 {
+  background-color: #5c67f2;
+  color: white;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0; /* No bottom margin for tight spacing */
+}
+
+/* Container for sections, for better alignment and padding */
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: white;
+  margin-bottom: 20px; /* Space between sections */
+}
+
+/* Styling the login and article input buttons */
+button {
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #4a54e1; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+button:active {
+  transform: translateY(1px); /* Push down when clicked */
+}
+
+/* Form input and textarea styles */
+input[type="text"], textarea {
+  width: calc(100% - 40px); /* Full width minus padding */
+  padding: 10px;
+  margin-top: 5px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus {
+  border-color: #5c67f2;
+  outline: none; /* Removes the default focus outline */
+}
+
+/* Unordered list styles */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #5c67f2;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #eef0fc; /* Lighter background on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body, button {
+      font-size: 14px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  section {
+      padding: 15px;
+  }
+}
