@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Blog</title>
+<link rel="stylesheet" href="{{ asset('styles/enri.css')}}"/>
+</head>
+<body>
+<section id="login-section">
+    <button id="login-btn">Login as Admin</button>
+    <p id="login-error" style="color:red;"></p>
+</section>
+
+<section id="new-article" style="display:none;">
+    <h2>New Article</h2>
+    <form id="article-form">
+        <input type="text" id="title" placeholder="Title" required><br>
+        <textarea id="content" placeholder="Content" required></textarea><br>
+        <button type="submit">Submit Article</button>
+    </form>
+</section>
+<section>
+    <h2>Articles</h2>
+    <ul id="article-list"></ul>
+</section>
+<script src="{{asset('styles/script.js')}}"></script>
+</body>
+</html>
