@@ -8,3 +8,4 @@ Proiect Software in Echipa - PABD2024
 6. Topala Nicolae
 7. Neagu Cristian
 8. Vaideanu Cornel
+9. Bacanaru Silviu

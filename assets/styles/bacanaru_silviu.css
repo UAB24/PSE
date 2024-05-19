@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --hover-color: #2980b9;
+    --error-color: #e74c3c;
+    --background-color: #ecf0f1;
+    --font-family: Arial, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 80vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #login-page{
+    padding: 20px;
+    border: 1px solid black;
+    margin: 0 auto;
+    max-width: 680px;
+  }
+  
+  .form-page, .personal-page {
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+  }
+  
+  input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .animated-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .animated-button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+  }
+  
+  #error-message {
+    color: var(--error-color);
+    font-size: 0.9em;
+    margin-top: 10px;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px 0;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .left-column, .right-column {
+    width: 48%;
+    padding: 10px;
+  }
+  
+  #question-section, #donation-section {
+    margin-top: 20px;
+  }
+  
+  #questions-list ul {
+    text-align: left;
+    width: 90%;
+    min-width: 420px;
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  
+  #questions-list li {
+    background-color: var(--background-color);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  

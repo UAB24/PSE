@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login</title>
+    <link rel="stylesheet" href="{{ asset('styles/bacanaru_silviu.css')}}"/>
+</head>
+<body>
+    <div class="container">
+        <div id="login-page" class="form-page">
+            <h1>Bine ai venit pe pagina mea!</h1>
+            <h2>Te rog sa te autentifici pentru a vedea continutul 🚀</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Parola:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="animated-button">Conectare</button>
+                <p id="error-message"></p>
+                <span>Credențiale: "test"</span>
+            </form>
+        </div>
+        <div id="personal-page" class="personal-page" style="display: none;">
+            <div class="left-column">
+                <h2>Bine ai venit pe pagina lui <span id="user-name"></span>!</h2>
+                <p><strong>Job:</strong> <span id="user-job"></span></p>
+                <img id="user-photo" src="" alt="User Photo">
+                <p><strong>Descriere:</strong></p>
+                <p id="user-description"></p>
+                <p>Cunosc următoarele tehnologii: React, Angular, Nest JS, Tailwind CSS și ASP.NET Core</p>
+                <div id="questions-list">
+                    <h3>Întrebări ?</h3>
+                    <ul id="questions"></ul>
+                </div>
+            </div>
+            <div class="right-column">
+                <div id="question-section">
+                    <h3>Adresează o intrebare</h3>
+                    <form id="add-question-form">
+                        <label for="topic">Topic:</label>
+                        <input type="text" id="topic" name="topic" required>
+                        <label for="question">Întrebare:</label>
+                        <input type="text" id="question" name="question" required>
+                        <label for="asker">Nume:</label>
+                        <input type="text" id="asker" name="asker" required>
+                        <button type="submit" class="animated-button">Întreabă</button>
+                    </form>
+                </div>
+                <div id="donation-section">
+                    <h3>Donează-mi o cafea !</h3>
+                    <form id="donation-form">
+                        <label for="amount">Ce sumă ?</label>
+                        <select id="amount" name="amount" required>
+                            <option value="5">5 RON</option>
+                            <option value="10">10 RON</option>
+                            <option value="20">20 RON</option>
+                        </select>
+                        <label for="reason">Motiv:</label>
+                        <input type="text" id="reason" name="reason" required>
+                        <label for="payer">Donator:</label>
+                        <input type="text" id="payer" name="payer" required>
+                        <button type="submit" class="animated-button">Plătește</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{asset('scripts/bacanaru_silviu.js')}}"></script>
+</body>
+</html>
