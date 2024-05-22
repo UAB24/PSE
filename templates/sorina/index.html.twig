@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog-ul meu</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #ffccf2; 
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin-top: 0;
+    color: #ff99cc; 
+}
+
+h2 {
+    text-align: left; 
+    color: #ff66b2; 
+}
+
+#post-form {
+    margin-top: 20px;
+}
+
+#post-form input,
+#post-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ff99cc; 
+    border-radius: 5px;
+}
+
+#add-post-btn {
+    background-color: #ff99cc; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#add-post-btn:hover {
+    background-color: #ff66b2; 
+}
+
+/* Stilizare pentru postări */
+#posts article {
+    border-bottom: 1px solid #ff99cc; 
+    padding: 10px 0;
+}
+
+#posts h2 {
+    text-align: left; 
+    color: #ff66b2; 
+}
+
+#posts h2:hover {
+    color: #ff33a6;
+}
+
+.comments-section h3 {
+    color: #ff66b2; 
+}
+
+.comments-section input,
+.comments-section textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #ff99cc; 
+    border-radius: 5px;
+}
+
+.comments-section button {
+    background-color: #ff99cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Blog</h1>
+        <button id="login-btn">Login as Admin</button>
+        <button id="logout-btn" style="display: none;">Logout</button>
+        <p id="login-error" style="color: red;"></p>
+    </header>
+    <main>
+        <div id="posts"></div>
+        <div id="new-post-section" style="display: none;">
+            <h2>Adaugă Articol</h2>
+            <input type="text" id="post-title" placeholder="Titlu">
+            <textarea id="post-content" placeholder="Conținut"></textarea>
+            <button id="add-post-btn">Adaugă Articol</button>
+        </div>
+        <button id="clear-storage-btn">Șterge</button>
+    </main>
+    <script src="{{asset('styles/scriptsorina.js')}}"></script>
+</body>
+</html>
