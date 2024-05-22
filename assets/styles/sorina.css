@@ -1,0 +1,62 @@
+/* Stilizare de bază */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+#post-form {
+    margin-top: 20px;
+}
+
+#post-form input,
+#post-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#add-post-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#add-post-btn:hover {
+    background-color: #555;
+}
+
+/* Stilizare pentru postări */
+#posts article {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+#posts h2 {
+    text-align: left;
+    color: #333;
+}
+
+#posts h2:hover {
+    color: #007BFF; /* Schimbare culoare pe hover */
+}
