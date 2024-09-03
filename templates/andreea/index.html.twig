@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pagina Personală Andreea{% endblock %}
+
+{% block body %}
+<style>
+    body {
+        background-color: #f0f8ff; /* Culoarea de fundal */
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+    h1 {
+        color: #333;
+    }
+    .content {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .content img {
+        width: 150px;
+        margin-right: 20px;
+        border-radius: 8px;
+    }
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<div class="container">
+    <h1>Andreea</h1>
+    <p>Acesta este primul paragraf de text pentru pagina personală. Aici vei adăuga informații relevante despre tine.</p>
+    <p>Acesta este al doilea paragraf, care oferă mai multe informații și detalii despre realizările tale sau despre proiecte.</p>
+    <p>Acesta este al treilea paragraf, cu detalii suplimentare care completează prezentarea ta.</p>
+
+    <div class="content">
+        <img src="{{ asset('images/andreea.jpg') }}" alt="Fotografie personală">
+        <ul>
+            <li>Punct 1 al listei</li>
+            <li>Punct 2 al listei</li>
+            <li>Punct 3 al listei</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
