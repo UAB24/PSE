@@ -1,50 +1,287 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Pagina Personală Andreea{% endblock %}
+{% block title %}Descoperă Universul Andreei: Pasiuni, Proiecte și Prieteni Necuvântători{% endblock %}
 
 {% block body %}
 <style>
+    /* Stiluri generale */
     body {
-        background-color: #f0f8ff; /* Culoarea de fundal */
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-    .container {
-        max-width: 800px;
-        margin: auto;
-    }
-    h1 {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9);
+        background-size: 600% 600%;
+        animation: gradientBG 15s ease infinite;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: #333;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
-    .content {
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 0%; }
+        50% { background-position: 100% 100%; }
+        100% { background-position: 0% 0%; }
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid #ff6f61;
+    }
+
+    header h1 {
+        color: #ff6f61;
+        font-size: 2.5em;
+        margin: 0;
+        animation: slideInDown 1s ease-in-out;
+    }
+
+    nav {
         display: flex;
-        align-items: flex-start;
-        margin-bottom: 20px;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
     }
-    .content img {
-        width: 150px;
-        margin-right: 20px;
+
+    nav a {
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 12px 24px;
+        background-color: #4a90e2;
         border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s;
     }
-    ul {
-        list-style-type: disc;
-        padding-left: 20px;
+
+    nav a:hover {
+        background-color: #357ABD;
+        transform: translateY(-3px);
+    }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        animation: slideInUp 1.2s ease-in-out;
+    }
+
+    .hero img {
+        width: 250px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-content {
+        flex: 1;
+    }
+
+    .section-title {
+        color: #ff6f61;
+        font-size: 2em;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        border-bottom: 4px solid #ff6f61;
+        padding-bottom: 5px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 14px 28px;
+        background-color: #ff6f61;
+        color: #ffffff;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #e94e77;
+        transform: translateY(-3px);
+    }
+
+    .info-section {
+        margin-top: 30px;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        animation: slideInRight 1.5s ease-in-out;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #ff6f61;
+        color: #ffffff;
+    }
+
+    td {
+        background-color: #f9f9f9;
+    }
+
+    tr:hover td {
+        background-color: #e0e0e0;
+    }
+
+    /* Animații */
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInDown {
+        0% { opacity: 0; transform: translateY(-50px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInUp {
+        0% { opacity: 0; transform: translateY(100px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideInRight {
+        0% { opacity: 0; transform: translateX(100px); }
+        100% { opacity: 1; transform: translateX(0); }
     }
 </style>
 
 <div class="container">
-    <h1>Andreea</h1>
-    <p>Acesta este primul paragraf de text pentru pagina personală. Aici vei adăuga informații relevante despre tine.</p>
-    <p>Acesta este al doilea paragraf, care oferă mai multe informații și detalii despre realizările tale sau despre proiecte.</p>
-    <p>Acesta este al treilea paragraf, cu detalii suplimentare care completează prezentarea ta.</p>
+    <header>
+        <h1>Descoperă Universul Andreei: Pasiuni, Proiecte și Prieteni Necuvântători</h1>
+        <nav>
+            <a href="#about">Despre Mine</a>
+            <a href="#interests">Interese</a>
+            <a href="#projects">Proiecte</a>
+            <a href="#dogs">Căței</a>
+        </nav>
+    </header>
 
-    <div class="content">
-        <img src="{{ asset('images/andreea.jpg') }}" alt="Fotografie personală">
-        <ul>
-            <li>Punct 1 al listei</li>
-            <li>Punct 2 al listei</li>
-            <li>Punct 3 al listei</li>
-        </ul>
+    <div class="hero">
+        <img src="{{ asset('images/andreea.jpg') }}" alt="Fotografie cu un cățel">
+        <div class="text-content">
+            <p>Bun venit pe pagina mea personală! Sunt Andreea, o persoană creativă și dedicată, cu o pasiune profundă pentru tehnologie și o dragoste imensă pentru animale. Îmi place să îmbin munca și hobby-urile, contribuind activ la proiecte care aduc un impact pozitiv în comunitate.</p>
+            <a href="#projects" class="cta-button">Descoperă Proiectele Mele</a>
+        </div>
     </div>
+
+    <section id="about" class="about-me">
+        <h2 class="section-title">Despre Mine</h2>
+        <p>Cu o experiență vastă în dezvoltarea web și design, mă dedic în fiecare zi să îmi îmbunătățesc abilitățile și să explorez noi provocări. Sunt mereu deschisă să învăț și să colaborez cu alții pentru a crea soluții inovatoare care fac diferența.</p>
+    </section>
+
+    <section id="interests" class="info-section">
+        <h2 class="section-title">Interese și Pasiuni</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Interes</th>
+                    <th>Descriere</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Voluntariat</td>
+                    <td>Particip activ la diverse activități de voluntariat, în special cele legate de protecția animalelor și mediu.</td>
+                </tr>
+                <tr>
+                    <td>Fotografie</td>
+                    <td>Iubesc să surprind momente speciale prin fotografie, fie că este vorba de peisaje sau portrete.</td>
+                </tr>
+                <tr>
+                    <td>Tehnologie</td>
+                    <td>Sunt pasionată de dezvoltarea web și de noile tehnologii care revoluționează industria digitală.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="projects" class="info-section">
+        <h2 class="section-title">Proiecte Relevante</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Proiect</th>
+                    <th>Descriere</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Site de Voluntariat</td>
+                    <td>Un site dedicat activităților de voluntariat, cu opțiuni pentru înscriere și gestionare a evenimentelor.</td>
+                    <td><a href="#">Detalii</a></td>
+                </tr>
+                <tr>
+                    <td>Blog Personal</td>
+                    <td>Un blog unde împărtășesc gânduri, experiențe și tutoriale despre diverse subiecte.</td>
+                    <td><a href="#">Detalii</a></td>
+                </tr>
+                <tr>
+                    <td>Curs de Fotografie</td>
+                    <td>Un proiect educativ pentru tineri pasionați de fotografie, unde predau tehnici de bază și avansate.</td>
+                    <td><a href="#">Detalii</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="dogs" class="info-section">
+        <h2 class="section-title">Despre Căței</h2>
+        <p>Cățelul meu este parte din familia mea și îmi aduce zilnic zâmbetul pe buze. Este energic, iubitor și mereu gata de aventură. În secțiunea de mai jos, am adunat câteva informații utile pentru iubitorii de căței.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rasă</th>
+                    <th>Caracteristici</th>
+                    <th>Temperament</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Golden Retriever</td>
+                    <td>Mărime medie, blană aurie, foarte prietenos.</td>
+                    <td>Jucăuș, loial, inteligent.</td>
+                </tr>
+                <tr>
+                    <td>Beagle</td>
+                    <td>Mărime mică spre medie, urechi lungi, curios.</td>
+                    <td>Energic, sociabil, curios.</td>
+                </tr>
+                <tr>
+                    <td>Bulldog Francez</td>
+                    <td>Micuț, blană scurtă, urechi de liliac.</td>
+                    <td>Iubitor, calm, protector.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 </div>
 {% endblock %}
