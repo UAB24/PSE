@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit - Kerven's Page{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/kerven.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h1>Edit Page</h1>
+                <div class="edit-link">
+                    <a href="{{ path('app_kerven') }}">View Page</a>
+                </div>
+
+                <form method="post" action="{{ path('app_kerven_edit') }}" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" value="{{ page.title }}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="10" required>{{ page.description }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="interests">Interests (one per line)</label>
+                        <textarea id="interests" name="interests" rows="5" required>{{ page.interests }}</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Profile Photo</label>
+                        <div class="current-photo">
+                            <img src="{{ asset('images/' ~ page.photo) }}" alt="Current Profile Picture" class="profile-image">
+                        </div>
+                        <input type="file" id="photo" name="photo" accept="image/*">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %} 

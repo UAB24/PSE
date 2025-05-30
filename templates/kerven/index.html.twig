@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page.title }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/kerven.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="image-container">
+                <img src="{{ asset('images/' ~ page.photo) }}" alt="Kerven's Profile Picture" class="profile-image">
+            </div>
+            <div class="text-content">
+                <h1>{{ page.title }}</h1>
+                
+                <div class="description">
+                    {{ page.description|nl2br }}
+                </div>
+
+                <h2>My Interests</h2>
+                <ul>
+                    {% for interest in page.interests|split('\n') %}
+                        <li>{{ interest }}</li>
+                    {% endfor %}
+                </ul>
+
+                <div class="edit-link">
+                    <a href="{{ path('app_kerven_edit') }}">Edit Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %} 
