@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ asset('styles/batyr.css') }}">
+</head>
+<body>
+    <div class="batyr-container">
+        <h1 class="batyr-headline">{{ page.title }}</h1>
+        <div class="batyr-img-wrapper">
+            <img src="{{ asset('images/' ~ page.photo) }}" alt="Batyr profile image">
+        </div>
+        <div class="batyr-content">
+            {{ page.description|nl2br }}
+        </div>
+        <div class="edit-link">
+            <a href="{{ path('app_batyr_login') }}">Edit Page</a>
+        </div>
+    </div>
+</body>
+</html> 
