@@ -1,0 +1,219 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Esenov | Portfolio{% endblock %}
+
+{% block body %}
+<style>
+    :root {
+        --primary: #0061ff;
+        --dark: #0f1930;
+        --light-bg: #f8fafc;
+        --slate-gray: #64748b;
+    }
+
+    body { 
+        background-color: var(--light-bg); 
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+    }
+
+.hero-section {
+    background: radial-gradient(circle at top right, #1e293b, #0f172a);
+    color: white;
+    padding: 60px 20px 100px 20px; /* Alt boşluk artırıldı */
+    /* 🔥 Eğimi %90'dan %96'ya çekerek daha düz bir hat sağladık */
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%); 
+    text-align: center;
+}
+
+    .profile-img {
+        width: 130px; 
+        height: 130px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 0 auto 1.5rem auto;
+        display: block;
+        background-color: #fff;
+        object-fit: scale-down;
+        object-position: center 20%;
+    }
+
+    .main-wrapper {
+    max-width: 1050px;
+    margin: -40px auto 50px auto; /* 🔥 -70px yerine -40px yaparak kartı aşağı indirdik */
+    padding: 0 25px;
+}
+
+    .main-card {
+        background: white;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        padding: 45px; /* İç padding artırıldı */
+    }
+
+    /* "Hakkımda" ve "Hadi Tanışalım" başlıklarını düzenler */
+.section-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    color: var(--primary); /* Daha belirgin bir renk */
+    margin-top: 20px;      /* 🔥 Siyah alandan aşağı iten boşluk */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .section-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #f1f5f9;
+    }
+
+    .form-group-custom { margin-bottom: 1.5rem; }
+    
+    .form-control {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 14px;
+        width: 100%;
+        background-color: #fcfcfd;
+    }
+
+    /* Mesaj Gönder Butonunu küçültür */
+.btn-submit {
+    background: var(--primary);
+    border: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px 25px;    /* 🔥 İç boşluğu azaltarak butonu küçülttük */
+    border-radius: 10px;
+    width: auto;           /* 🔥 Tüm satırı kaplamasın, içeriği kadar olsun */
+    min-width: 160px;      /* Çok da daralmasın diye taban genişlik */
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block; /* Yan yana eleman gibi davranmasını sağlar */
+}
+
+    /* Mesaj Listesi ve Font Ayarı */
+    .message-item {
+        background: #fff;
+        border: 1px solid #f1f5f9;
+        padding: 18px;
+        border-radius: 16px;
+        margin-bottom: 15px;
+    }
+
+    .msg-name { 
+        font-weight: 300; 
+        font-size: 1rem; /* Font boyutu biraz küçültüldü */
+        color: var(--dark); 
+    }
+    
+   /* Sil Butonu - Daha belirgin ve modern hali */
+/* Gelen Kutusu Sil Butonu - Modern Revize */
+.delete-link {
+    color: #e11d48;           /* Canlı bir kırmızı */
+    background: #fff1f2;      /* Çok hafif kırmızı/pembe arka plan */
+    padding: 5px 12px;        /* Buton formu için dolgu */
+    border-radius: 6px;       /* Tasarımdaki diğer kartlarla uyumlu köşe */
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #ffe4e6;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.delete-link:hover {
+    background: #e11d48;      /* Üstüne gelince tam kırmızı */
+    color: white;             /* Yazı beyaz */
+    border-color: #e11d48;
+    box-shadow: 0 4px 10px rgba(225, 29, 72, 0.2);
+    transform: translateY(-1px);
+}
+    .tech-badge {
+        background: rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+        padding: 5px 15px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+    }
+</style>
+
+<div class="hero-section">
+    <div class="container">
+        <img src="{{ asset('images/me.jpg') }}" class="profile-img" alt="Esenov Hoca">
+        <h1>Esenov Hoca</h1>
+        <p class="text-white-50">"Kod kalitesi bir tercih değil, zorunluluktur."</p>
+        
+        <div class="d-flex justify-content-center gap-2 mt-3">
+            <span class="tech-badge">Symfony 7</span>
+            <span class="tech-badge">PHP 8.3</span>
+            <span class="tech-badge">PostgreSQL</span>
+        </div>
+    </div>
+</div>
+
+<div class="main-wrapper">
+    <div class="main-card">
+        <div class="row">
+            <div class="col-md-5 mb-5 mb-md-0 pe-lg-5">
+                <h4 class="section-title">Hakkımda</h4>
+                <p class="text-secondary mb-5" style="font-size: 0.9rem; line-height: 1.7;">
+                    On yılı aşkın tecrübemle modern web sistemleri inşa ediyorum. Kod kalitesi ve sürdürülebilirlik en büyük önceliğimdir.
+                </p>
+
+                <h4 class="section-title">Hadi Tanışalım</h4>
+                {{ form_start(esenov_form) }}
+                    <div class="form-group-custom">
+                        {{ form_widget(esenov_form.fullName, {'attr': {'class': 'form-control', 'placeholder': 'Adınız Soyadınız'}}) }}
+                    </div>
+                    <div class="form-group-custom">
+                        {{ form_widget(esenov_form.email, {'attr': {'class': 'form-control', 'placeholder': 'E-posta Adresiniz'}}) }}
+                    </div>
+                    <div class="form-group-custom">
+                        {{ form_widget(esenov_form.message, {'attr': {'class': 'form-control', 'placeholder': 'Projenizden bahsedin...', 'rows': '4'}}) }}
+                    </div>
+                    <button class="btn btn-submit shadow-sm">Mesajı Gönder ⚡</button>
+                {{ form_end(esenov_form) }}
+            </div>
+
+            <div class="col-md-7 ps-lg-5 border-start">
+                <h4 class="section-title d-flex justify-content-between align-items-center">
+                    Gelen Kutusu
+                    <span class="badge rounded-pill bg-primary text-white px-3" style="font-size: 0.7rem;">{{ messages|length }}</span>
+                </h4>
+
+                <div class="message-container" style="max-height: 500px; overflow-y: auto;">
+                    {% for msg in messages %}
+                        <div class="message-item">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <span class="msg-name">{{ msg.fullName }}</span>
+                                <a href="{{ path('esenov_delete', {'id': msg.id}) }}" 
+                                   class="delete-link" 
+                                   onclick="return confirm('Silinsin mi hocam?')">Sil</a>
+                            </div>
+                            <small class="text-primary d-block mb-2" style="font-size: 0.85rem;">{{ msg.email }}</small>
+                            <p class="msg-text mb-3" style="font-size: 0.85rem; color: #475569;">{{ msg.message }}</p>
+                            <div class="text-muted small border-top pt-2" style="font-size: 0.7rem;">
+                                🗓️ {{ msg.createdAt|date('d F Y - H:i') }}
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="text-center py-5">
+                            <p class="text-muted">Gelen kutusu boş hocam.</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

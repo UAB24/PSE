@@ -1,0 +1,13 @@
+framework:
+    asset_mapper:
+        # The paths to make available to the asset mapper.
+        paths:
+            - assets/
+            # BURAYI EKLE:
+            - vendor/symfony/stimulus-bundle/assets/dist/
+        missing_import_mode: strict
+
+when@prod:
+    framework:
+        asset_mapper:
+            missing_import_mode: warn
